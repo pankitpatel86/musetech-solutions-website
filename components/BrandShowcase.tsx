@@ -70,7 +70,7 @@ const BrandCard: React.FC<{ brand: typeof BRANDS[0]; index: number }> = ({ brand
             transition={{ duration: 0.8 }}
             className="flex-1 relative group w-full"
           >
-            <div className="relative aspect-[4/5] md:aspect-[4/5] w-full max-w-md mx-auto overflow-hidden rounded-sm border border-white/10 shadow-2xl bg-black">
+            <div className="relative aspect-[4/5] md:aspect-[4/5] w-full max-w-lg mx-auto overflow-hidden rounded-sm border border-white/10 shadow-2xl bg-black">
                 <img 
                     src={brand.image} 
                     alt={brand.name} 
