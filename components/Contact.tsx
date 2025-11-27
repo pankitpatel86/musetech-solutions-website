@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
                             </div>
                             <div>
                                 <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">Call Us</p>
-                                <a href="tel:+911234567890" className="text-white hover:text-brand-gold transition-colors text-lg">+91 12345 67890</a>
+                                <a href="tel:+971529155461" className="text-white hover:text-brand-gold transition-colors text-lg">+971 529155461</a>
                             </div>
                         </div>
                         <div className="flex items-start gap-4">

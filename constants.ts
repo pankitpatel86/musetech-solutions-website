@@ -5,7 +5,7 @@ export const COMPANY_INFO = {
   tagline: "Technology • Wellness • Digital Identity",
   description: "Three Brands. One Vision. Thoughtfully Curated to Support Modern Growth.",
   about: "Established in Dubai, Musetech Solutions is a proudly Canadian-owned company dedicated to blending innovation with purpose. We create sustainable digital ecosystems through our brands, combining technology, wellness, and creativity to enhance businesses and communities across the UAE.",
-  email: "info@musetechsolutions.net",
+  email: "info@musetechsolutions.com",
   phone: "+971 50 000 0000", // Placeholder based on generic format, using info from PDF footer if available
   copyright: "Copyrights © 2025 Designed & Developed by iGrowth Media"
 };
@@ -57,7 +57,7 @@ export const BRANDS: Brand[] = [
     ],
     color: "bg-[#0f0f0f]", // Solid almost black
     accent: "#FFFFFF",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2574&auto=format&fit=crop",
+    image: "/tappit-card.jpg",
     linkText: "Get Your Digital Card",
     linkUrl: "https://tappitcards.com/"
   }
