@@ -57,7 +57,7 @@ export const BRANDS: Brand[] = [
     ],
     color: "bg-[#0f0f0f]", // Solid almost black
     accent: "#FFFFFF",
-    image: "/Bamboo card.jpg",
+    image: "/Bamboo-card.jpg",
     linkText: "Get Your Digital Card",
     linkUrl: "https://tappitcards.com/"
   }
