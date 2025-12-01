@@ -45,8 +45,8 @@ export const BRANDS: Brand[] = [
     linkUrl: "https://auraliscrystals.com/"
   },
   {
-    id: 'tapcard',
-    name: "TapCard | Digital Business Cards",
+    id: 'tappitcards',
+name: "TappitCards | Digital Business Cards",
     tagline: "Share your identity in one tap.",
     description: "A smart, eco-friendly alternative to paper business cards. Custom designs you can share instantly via QR, link, or NFC.",
     services: [
