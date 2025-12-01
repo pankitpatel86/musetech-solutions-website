@@ -23,10 +23,11 @@ export const BRANDS: Brand[] = [
       "Ongoing Technical Support"
     ],
     color: "bg-[#1a2e35]", // Solid deep slate/teal
-    accent: "#00C2FF",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
-    linkText: "Read More",
-    linkUrl: "https://creativemuse.ca/"
+accent: "#00C2FF",
+image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
+linkText: "Read More",
+linkUrl: "https://creativemuse.ca/",
+linkClass: "text-yellow-500 hover:text-red-500 font-bold"
   },
   {
     id: 'auralis-crystals',
