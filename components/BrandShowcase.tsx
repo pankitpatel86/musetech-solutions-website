@@ -1,13 +1,38 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { BRANDS } from '../constants';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 
 const BrandCard: React.FC<{ brand: typeof BRANDS[0]; index: number }> = ({ brand, index }) => {
   const isEven = index % 2 === 0;
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [stickyTop, setStickyTop] = useState(0);
+
+  // When a card is taller than the viewport (e.g. on laptops), pin it by its
+  // bottom edge instead of its top so the whole card — including the call to
+  // action button — scrolls into view before the next card stacks over it.
+  useEffect(() => {
+    const el = cardRef.current;
+    if (!el) return;
+    const update = () => {
+      setStickyTop(Math.min(0, window.innerHeight - el.offsetHeight));
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    window.addEventListener('resize', update);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener('resize', update);
+    };
+  }, []);
 
   return (
-    <div className={`relative md:min-h-screen md:sticky md:top-0 flex items-center justify-center overflow-hidden py-20 ${brand.color}`}>
+    <div
+      ref={cardRef}
+      style={{ '--sticky-top': `${stickyTop}px` } as React.CSSProperties}
+      className={`relative md:min-h-screen md:sticky md:top-[var(--sticky-top)] flex items-center justify-center overflow-hidden py-20 md:py-16 ${brand.color}`}
+    >
       
       {/* Subtle pattern overlay using internal tailwind config asset */}
       <div className="absolute inset-0 bg-grain opacity-10 mix-blend-overlay" />
@@ -70,7 +95,7 @@ const BrandCard: React.FC<{ brand: typeof BRANDS[0]; index: number }> = ({ brand
             transition={{ duration: 0.8 }}
             className="flex-1 relative group w-full"
           >
-            <div className="relative aspect-[4/5] md:aspect-[4/5] w-full max-w-lg mx-auto overflow-hidden rounded-sm border border-white/10 shadow-2xl bg-black">
+            <div className="relative aspect-[4/5] md:aspect-auto md:h-[min(640px,75vh)] w-full max-w-lg mx-auto overflow-hidden rounded-sm border border-white/10 shadow-2xl bg-black">
                 <img 
                     src={brand.image} 
                     alt={brand.name} 

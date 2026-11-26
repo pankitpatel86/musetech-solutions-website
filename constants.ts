@@ -26,7 +26,7 @@ export const BRANDS: Brand[] = [
 accent: "#00C2FF",
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
 linkText: "Read More",
-linkUrl: "https://creativemuse.ca/",
+linkUrl: "https://creativemuse.co/",
 linkClass: "text-yellow-500 hover:text-red-500 font-bold"
   },
   {
@@ -60,7 +60,7 @@ name: "TappitCards | Digital Business Cards",
     accent: "#FFFFFF",
     image: "/Bamboo-card.jpg",
     linkText: "Get Your Digital Card",
-    linkUrl: "https://tappitcards.com/"
+    linkUrl: "https://tappitcards.ae/"
   }
 ];
 
